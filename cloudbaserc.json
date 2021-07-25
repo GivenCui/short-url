@@ -1,0 +1,14 @@
+{
+    "version": "2.0",
+    "envId": "test-6g86kl1g67b9f852",
+    "functionRoot": "../",
+    "functions": [
+      {
+        "name": "short-url",
+        "timeout": 5,
+        "runtime": "Nodejs10.15",
+        "memorySize": 128,
+        "handler": "index.main"
+      }
+    ]
+  }

@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
     }
 
     // slug合法长度校验
-    if(slug && slug.length < 2 || slug.length > 10) {
+    if(slug && (slug.length < 2 || slug.length > 10)) {
         return res.status(400).send({message: 'Illegal slug (>=2 && <=10).'})
     }
 

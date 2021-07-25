@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node-dev -r dotenv/config index_dev.js"
+    "dev": "node-dev -r dotenv/config index_dev.js",
+    "deploy": "tcb fn deploy short-url"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +13,12 @@
   "dependencies": {
     "@cloudbase/node-sdk": "^2.6.1",
     "express": "^4.17.1",
-    "nanoid": "^3.1.23"
+    "nanoid": "^3.1.23",
+    "serverless-http": "^2.7.0"
   },
   "devDependencies": {
+    "@cloudbase/cli": "^1.8.0",
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "node-dev": "^7.0.0"
   }
