@@ -1,0 +1,7 @@
+POST http://localhost:8081/create
+Content-Type: application/json
+
+{
+    "url": "https://www.gaotu100.com/",
+    "slug": "abc"
+}
