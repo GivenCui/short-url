@@ -20,3 +20,19 @@ A tiny, secure, URL-friendly, unique string ID generator for JavaScript
 import { nanoid } from 'nanoid'
 model.id = nanoid() //=> "V1StGXR8_Z5jdHi6B-myT"
 ```
+
+## 云函数
+触发器格式示例
+```js
+'use strict';
+exports.main = async (event, context) => {
+    console.log("Hello World")
+    console.log(event)
+    console.log(event["non-exist"])
+    console.log(context)
+    return event
+};
+
+```
+
+CLI工具编辑和管理云函数, [参考](https://cloud.tencent.com/document/product/876/41539)

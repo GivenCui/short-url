@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node-dev -r dotenv/config index.js"
+    "dev": "node-dev -r dotenv/config index_dev.js"
   },
   "keywords": [],
   "author": "",
