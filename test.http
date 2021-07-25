@@ -1,3 +1,4 @@
+### 测试手动指定 slug
 POST http://localhost:8081/create
 Content-Type: application/json
 
@@ -5,3 +6,14 @@ Content-Type: application/json
     "url": "https://www.gaotu100.com/",
     "slug": "abc"
 }
+
+### 测试自动生成 slug
+POST http://localhost:8081/create
+Content-Type: application/json
+
+{
+    "url": "https://test-m.gaotu100.com/gt-activity/activity-ceres/cms/criss-gouke?projectId=10168192627246593"
+}
+
+### 测试短链跳转
+GET http://localhost:8081/OAx0

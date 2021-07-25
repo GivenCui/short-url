@@ -12,3 +12,11 @@ SECRET_KEY = xxx
 node-dev -r dotenv/config index.js
 ```
 -r 先运行 dotenv/config
+
+## [nanoid](https://www.npmjs.com/package/nanoid)
+A tiny, secure, URL-friendly, unique string ID generator for JavaScript
+
+```js
+import { nanoid } from 'nanoid'
+model.id = nanoid() //=> "V1StGXR8_Z5jdHi6B-myT"
+```
