@@ -1,4 +1,17 @@
 const express = require('express')
+const { init } = require('@cloudbase/node-sdk');
+
+// 在 CloudBase 云函数内使用服务端 SDK 时, 不需要密钥, 从环境变量中读取即可
+const {SECRET_ID, SECRET_KEY} = process.env 
+
+const tcb = init({
+    env: 'test-6g86kl1g67b9f852', // 环境ID
+    secretId: SECRET_ID,
+    secretKey: SECRET_KEY
+});
+
+// 1. 获取数据库引用
+const db = tcb.database()
 
 const app = express()
 
@@ -7,12 +20,11 @@ app.use(express.urlencoded({ extended: false }))
 
 app.post('/create', async (req, res) => {
     const {url, slug} = req.body
+    
+    // 2. 类似 MongoDB
+    await db.collection('links').add({ slug, url })
 
-    res.send({
-        url,
-        slug,
-        date: Date.now()
-    })
+    res.send({ link: `http://localhost:8081/${slug}` })
 })
 
 module.exports = app
