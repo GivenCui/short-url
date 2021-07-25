@@ -16,4 +16,4 @@ Content-Type: application/json
 }
 
 ### 测试短链跳转
-GET http://localhost:8081/OAx0
+GET http://localhost:8081/guitar
