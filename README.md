@@ -2,6 +2,7 @@
 注意: pull代码后需要手动创建 .env 文件, 其中的密钥需要自己在腾讯云控制台中创建, 格式如下
 
 ```txt
+ENV_ID = xxx
 SECRET_ID = xxx
 SECRET_KEY = xxx
 ```
