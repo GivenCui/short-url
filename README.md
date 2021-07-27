@@ -37,3 +37,8 @@ exports.main = async (event, context) => {
 ```
 
 CLI工具编辑和管理云函数, [参考](https://cloud.tencent.com/document/product/876/41539)
+
+## REST CLIENT 插件
+[参考](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+
+配合`.http`或`.rest`为拓展名的文件, 方便 vscode 中做接口测试
